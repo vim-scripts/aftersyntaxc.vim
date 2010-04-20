@@ -6,6 +6,7 @@
 " Version: 0.1
 "
 " Changelog:
+"   0.2 - change [] to operator
 "   0.1 - initial upload, modification from vimscript#1201, Extended c.vim
 
 
@@ -237,11 +238,12 @@ syn match cOperator	"[.!~*&%<>^|=,+-]"
 syn match cOperator	"/[^/*=]"me=e-1
 syn match cOperator	"/$"
 syn match cOperator "&&\|||"
+syn match cOperator	"[][]"
 
 syn match cUserFunction "\<\a\w*\>\(\s\|\n\)*("me=e-1
 syn match cUserFunctionPointer "\<\a\w*\>[^()]*)\(\s\|\n\)*(" contains=cDelimiter
 
-syn match cDelimiter	"[][(){};\\]"
+syn match cDelimiter	"[(){};\\]"
 
 " Booleans
 syn keyword cBoolean true false TRUE FALSE
